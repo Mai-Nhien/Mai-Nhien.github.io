@@ -18,7 +18,7 @@
   cursor:pointer;
   transition: all 0.4s ease-out;
   box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
-  overflow:scroll;
+  overflow:hidden;
   color:white;
   font-family:'Karla', sans-serif;;
   
@@ -62,6 +62,7 @@
 /*   opacity:0; */
   transform: translateX(-200px);
   transition-delay: 0.2s;
+  overflow:scroll;
 }
 .animate-text
 {
