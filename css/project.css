@@ -62,7 +62,6 @@
 /*   opacity:0; */
   transform: translateX(-200px);
   transition-delay: 0.2s;
-  overflow:scroll;
 }
 .animate-text
 {
