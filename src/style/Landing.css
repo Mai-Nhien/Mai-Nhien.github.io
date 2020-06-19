@@ -1,0 +1,23 @@
+.Landing {
+    text-align: center
+}
+
+.Landing-header {
+    background-color: #FAEBD7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-family: Georgia, serif;
+}
+
+.intro {
+    font-size: 400%;
+    margin-bottom: 0
+}
+
+.typewriter {
+    font-size: 200%
+}
