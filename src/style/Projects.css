@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+
+.Projects {
+    background-color: #FFFAF0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Projects-content {
+    margin: auto;
+    width: 70%;
+    color: black;
+    font-family: Georgia, serif;
+}
+
+h1 {
+    color: #4d79cb;
+}
+
+.card {
+    display:inline-block;
+    padding-right: 5%;
+    padding-top: 5%;
+    font-family: Karla;
+}
+
+.cardTitle {
+    font-weight: bold;
+}
+
+.cardButton {
+    background-color:  rgb(170, 167, 158);
+    color: #FFFAF0;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cardButton:hover {
+    cursor: pointer;
+}
+
+.modal {
+    color: #4d79cb
+}

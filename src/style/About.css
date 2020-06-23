@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+.About {
+    text-align: center;
+    background-color: #FFFAF0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.About-content {
+    text-align: center;
+    margin: auto;
+    width: 70%;
+    color: black;
+    font-family: Georgia, serif;
+}
+
+.rightContent {
+    float: right;
+    text-align: left;
+    width: 50%;
+    min-width: 300px;
+    font-family: Karla;
+}
+
+#profileImage {
+    float: left;
+    width: 40%;
+    border: none;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+#aboutTitle {
+    color: #4d79cb;
+    font-family: Georgia, serif;
+}
+
+.link {
+    text-decoration: none;
+    color: #4d79cb;
+}
+
+#socials {
+    color: #4d79cb;
+}
