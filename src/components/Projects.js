@@ -3,7 +3,11 @@ import '../style/Projects.css';
 import {Card, CardImg, CardText, CardBody, CardTitle, Button} from 'reactstrap'
 import sixtysix from '../assets/66logo.png'
 import zestIcon from '../assets/zestIcon.png'
+import countSixtySix from '../assets/count.png'
 import intern from '../assets/intern.png'
+import demo from '../assets/demoAccount.png'
+import community from '../assets/community.png'
+import team from '../assets/team.png'
 import {Dialog, IconButton, DialogContent, Typography} from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles';
 import MuiDialogTitle from '@material-ui/core/DialogTitle'
@@ -77,6 +81,11 @@ class ProjectModal extends Component {
                             I was the backend engineer on a team of 4: Anant Jain as the frontend engineer, Sophia Park as the designer, 
                             and Zach Canning as the product manager. </span>
                         </Typography>
+                        <img src={team} alt="Sixty six wireframe" width='100%'/>
+                        <Typography gutterBottom>
+                            <span style={{fontFamily: 'Karla'}}><span style={{color: "#4d79cb", fontWeight: 'bold'}}>what i did:</span> as the backend engineer I created and maintained a MongoDB database and built an Express.js server to handle all requests and backend 
+                            functionality. This server was hosted on Heroku. </span>
+                        </Typography>
                         <Typography gutterBottom>
                             <span style={{fontFamily: 'Karla'}}><span style={{color: "#4d79cb", fontWeight: 'bold'}}>the problem:</span> Our team was interested in lifestyle and health related issues- specifically productivity. 
                             We agreed that a big reason why people can't keep up with their goals and habits is because they lose motivation due to lack of results and accountability. 
@@ -86,10 +95,9 @@ class ProjectModal extends Component {
                             <span style={{fontFamily: 'Karla'}}><span style={{color: "#4d79cb", fontWeight: 'bold'}}>the solution:</span> sixty six is a mobile app that keeps track of how long you've stuck to your habits to encourage you to get to 66 days. 
                             The app also provides a productive community so that you can find inspiration from others and be held accountable. </span>
                         </Typography>
-                        <Typography gutterBottom>
-                            <span style={{fontFamily: 'Karla'}}><span style={{color: "#4d79cb", fontWeight: 'bold'}}>what i did:</span> as the backend engineer I created and maintained a MongoDB database and built an Express.js server to handle all requests and backend 
-                            functionality. This server was hosted on Heroku. </span>
-                        </Typography>
+                        <img src={countSixtySix} alt="Sixty six wireframe" width='50%'/>
+                        <img src={community} alt="Sixty six wireframe" width='50%'/>
+                        <img src={demo} alt="Sixty six wireframe" width='50%'/>
                     </DialogContent>
                 </ThemeProvider>
             </Dialog>
