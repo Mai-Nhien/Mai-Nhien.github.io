@@ -1,35 +1,98 @@
 import React, { Component } from 'react'
 import '../style/Projects.css';
-import {Card, CardImg, CardText, CardBody, CardTitle, Button,ModalBody, ModalHeader,} from 'reactstrap'
-import Modal from 'react-modal'
+import {Card, CardImg, CardText, CardBody, CardTitle, Button} from 'reactstrap'
 import sixtysix from '../assets/66logo.png'
 import zestIcon from '../assets/zestIcon.png'
 import intern from '../assets/intern.png'
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import {Dialog, IconButton, DialogContent, Typography} from '@material-ui/core'
+import { withStyles } from '@material-ui/core/styles';
+import MuiDialogTitle from '@material-ui/core/DialogTitle'
+import CloseIcon from '@material-ui/icons/Close'
+import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
+
+const titleTheme = createMuiTheme({
+    typography: {
+        fontFamily: 'Georgia, serif',
+    },
+});
+
+const karla = {
+    fontFamily: 'Karla'
+}
+
+const contentTheme = createMuiTheme({
+    typography: {
+        fontFamily: karla
+    }
+})
+
+const styles = (theme) => ({
+    root: {
+        margin: 0,
+        padding: theme.spacing(2),
+        fontFamily: theme.fontFamily,
+    },
+    closeButton: {
+        position: 'absolute',
+        right: theme.spacing(1),
+        top: theme.spacing(1),
+        color: theme.palette.grey[500],
+    },
+})
+
+const DialogTitle = withStyles(styles)((props) => {
+    const { children, classes, onClose, ...other } = props;
+    return (
+        <MuiDialogTitle disableTypography className={classes.root} {...other} >
+            <ThemeProvider theme={titleTheme}>
+                <Typography variant="h6">{children}</Typography>
+            </ThemeProvider>
+            
+            {onClose ? (
+            <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
+                <CloseIcon />
+            </IconButton>
+            ) : null}
+        </MuiDialogTitle>
+    );
+  });
 
 class ProjectModal extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render () {
         return (
-            <Modal 
-                size="lg" 
-                centered 
-                aria-labelledby="contained-modal-title-vcenter"
-                isOpen={this.props.isModalOpen} 
-                toggle={this.toggle}
-                portalClassName="modal"
+            <Dialog 
+                aria-labelledby="customized-dialog-title"
+                open={this.props.open}
+                onClose={this.props.onClose}
             >
-                <ModalHeader toggle={this.props.toggle} closeButton>
-                    sixty six
-                </ModalHeader>
-                <ModalBody>
-                    sixty six was a project built for a startup incubator at USC called Lavalab. I was on a team of 
-                    4 USC students.
-                </ModalBody>
-            </Modal>
+                <ThemeProvider theme={titleTheme}>
+                    <DialogTitle id="customized-dialog-title" onClose={this.props.onClose}>
+                        <span style={{color: "#4d79cb", fontWeight: 'bold'}}>sixty six</span>
+                    </DialogTitle>
+                </ThemeProvider>
+                <ThemeProvider theme={contentTheme}>
+                    <DialogContent dividers>
+                        <Typography gutterBottom>
+                            <span style={{fontFamily: 'Karla'}}><span style={{color: "#4d79cb", fontWeight: 'bold'}}>some background:</span> sixty six was a product created during my time in Lavalab, a product incubator and startup community at USC. 
+                            I was the backend engineer on a team of 4: Anant Jain as the frontend engineer, Sophia Park as the designer, 
+                            and Zach Canning as the product manager. </span>
+                        </Typography>
+                        <Typography gutterBottom>
+                            <span style={{fontFamily: 'Karla'}}><span style={{color: "#4d79cb", fontWeight: 'bold'}}>the problem:</span> Our team was interested in lifestyle and health related issues- specifically productivity. 
+                            We agreed that a big reason why people can't keep up with their goals and habits is because they lose motivation due to lack of results and accountability. 
+                            After doing some research, we found that recent studies have shown that it takes at least 66 days to fully establish a habit. </span>
+                        </Typography>
+                        <Typography gutterBottom>
+                            <span style={{fontFamily: 'Karla'}}><span style={{color: "#4d79cb", fontWeight: 'bold'}}>the solution:</span> sixty six is a mobile app that keeps track of how long you've stuck to your habits to encourage you to get to 66 days. 
+                            The app also provides a productive community so that you can find inspiration from others and be held accountable. </span>
+                        </Typography>
+                        <Typography gutterBottom>
+                            <span style={{fontFamily: 'Karla'}}><span style={{color: "#4d79cb", fontWeight: 'bold'}}>what i did:</span> as the backend engineer I created and maintained a MongoDB database and built an Express.js server to handle all requests and backend 
+                            functionality. This server was hosted on Heroku. </span>
+                        </Typography>
+                    </DialogContent>
+                </ThemeProvider>
+            </Dialog>
         );
     }
 }
@@ -38,22 +101,22 @@ class Projects extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          isModalOpen: false
+          open: false,
         };
     
-        this.showModal = this.showModal.bind(this);
-        this.toggle = this.toggle.bind(this);
+        this.handleClickOpen = this.handleClickOpen.bind(this);
+        this.handleClose = this.handleClose.bind(this);
     }
     
-    toggle() {
+    handleClickOpen() {
         this.setState({
-          isModalOpen: !this.state.isModalOpen
+          open: true
         });
     }
     
-    showModal() {
+    handleClose() {
         this.setState({
-            isModalOpen: true
+            open: false
         });
     }
 
@@ -73,7 +136,8 @@ class Projects extends Component {
                         <CardText>
                             A habit building and productivity mobile app built for Lavalab, USC's product incubator.
                         </CardText>
-                        <Button className="cardButton">learn more</Button>
+                        <Button className="cardButton" onClick={this.handleClickOpen}>learn more</Button>
+                        <ProjectModal open={this.state.open} onClose={this.handleClose}></ProjectModal>
                     </CardBody>
                 </Card>
                 <Card style={{ width: '15rem' }}>
