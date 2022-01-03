@@ -16,8 +16,8 @@ class About extends Component {
                         about me
                     </h1>
                     <p id="aboutDescription">
-                        Hi! I'm Mai. I recently graduated from the <span style={{color: "#4d79cb", fontWeight: 'bold'}}>University of Southern California</span> with a B.S in Computer Science. 
-                        This summer I'll start as an engineer at <span style={{color: "#4d79cb", fontWeight: 'bold'}}>Flexport</span>. Previously, I interned as a software engineering intern on 
+                        Hi! I'm Mai. I'm a graduate from the <span style={{color: "#4d79cb", fontWeight: 'bold'}}>University of Southern California</span> and I'm currently based in San Francisco. 
+                        I'm currently an engineer at <span style={{color: "#4d79cb", fontWeight: 'bold'}}>Flexport</span> working on their Order Management product. Previously, I interned as a software engineering intern on 
                         Flexport's Ocean team. Before that, I spent two summers at <span style={{color: "#4d79cb", fontWeight: 'bold'}}>Microsoft</span> as an explore intern and a software engineering 
                         intern on Azure IoT. I've been able to get experience as full stack developer, although my favorite projects have been more user-facing. I'm passionate about 
                         contributing to meaningful products and teams :) 
