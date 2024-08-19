@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "../style/Home.css";
+import aboutPic from "../assets/aboutPic.png";
+import resume from "../assets/MaiDang2020.pdf";
 import { FaGithub, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 
 export default function Home() {
@@ -124,6 +126,7 @@ export default function Home() {
 					</a>
 				</div>
 			</div>
+			{/* </div> */}
 		</div>
 	);
 }
