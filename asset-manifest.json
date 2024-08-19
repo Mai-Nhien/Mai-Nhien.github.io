@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8884327c.chunk.css",
+    "main.js": "/static/js/main.e7fcc2ee.chunk.js",
+    "main.js.map": "/static/js/main.e7fcc2ee.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fc36865a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fc36865a.js.map",
+    "static/js/2.e1a9645e.chunk.js": "/static/js/2.e1a9645e.chunk.js",
+    "static/js/2.e1a9645e.chunk.js.map": "/static/js/2.e1a9645e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a5c5e4c6e139d7c9079677a5a3ed6f5e.js": "/precache-manifest.a5c5e4c6e139d7c9079677a5a3ed6f5e.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.8884327c.chunk.css.map": "/static/css/main.8884327c.chunk.css.map",
+    "static/js/2.e1a9645e.chunk.js.LICENSE.txt": "/static/js/2.e1a9645e.chunk.js.LICENSE.txt",
+    "static/media/66logo.png": "/static/media/66logo.7650d1a9.png",
+    "static/media/MaiDang2020.pdf": "/static/media/MaiDang2020.5c3f9ab6.pdf",
+    "static/media/aboutPic.png": "/static/media/aboutPic.f3b613ae.png",
+    "static/media/community.png": "/static/media/community.aaaf10d9.png",
+    "static/media/count.png": "/static/media/count.6ef6b74a.png",
+    "static/media/demoAccount.png": "/static/media/demoAccount.2b893c6b.png",
+    "static/media/intern.png": "/static/media/intern.1f1331bf.png",
+    "static/media/team.png": "/static/media/team.29c68912.png",
+    "static/media/zestIcon.png": "/static/media/zestIcon.6309a345.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fc36865a.js",
+    "static/js/2.e1a9645e.chunk.js",
+    "static/css/main.8884327c.chunk.css",
+    "static/js/main.e7fcc2ee.chunk.js"
+  ]
+}
